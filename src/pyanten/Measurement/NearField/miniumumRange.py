@@ -1,13 +1,11 @@
-from numpy import asarray
-
 from pyanten.Utility import frequencyToWavelength
 
-def miniumumRange(frequency):
+def miniumumRange(frequency: float):
   r""" Minimum recommended distance for near-field antenna measurements in meters
 
   Parameters
   ----------
-  frequency : array_like [float]
+  frequency : float
       frequency of interest in Hertz [Hz]
 
   Notes
@@ -22,4 +20,4 @@ def miniumumRange(frequency):
   .. math::
       R_{nf} = 5\times\lambda = 5\times c_0/f
   """
-  return (5*asarray(frequencyToWavelength(frequency))).tolist()
+  return 5*frequencyToWavelength(frequency)

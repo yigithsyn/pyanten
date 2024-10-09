@@ -1,13 +1,11 @@
-from numpy import asarray
-
 from pyanten.Utility import frequencyToWavelength
 
-def samplingLength(frequency):
+def samplingLength(frequency: float):
   r""" Maximum sampling length for near-field antenna measurements
 
   Parameters
   ----------
-  frequency : array_like [float]
+  frequency : float
       frequency of interest in Hertz [Hz]
 
   References
@@ -20,5 +18,4 @@ def samplingLength(frequency):
   .. math::
       \Delta = \lambda / 2 = 0.5 \times (c_0 / f)
   """
-  Delta = 0.5*asarray(frequencyToWavelength(frequency))
-  return Delta.tolist()
+  return 0.5*frequencyToWavelength(frequency)

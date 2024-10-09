@@ -1,16 +1,15 @@
-from numpy import asarray, atan2, rad2deg
+from math import atan2, degrees
 
-
-def angleOfView(a, d, L):
+def angleOfView(a: float, d: float, L: float):
   r""" Reliable far-field angle-of-view in planar near-field antenna measurements
 
   Parameters
   ----------
-  a : array_like [float]
+  a : float
       antenna cross-section length
-  d : array_like [float]
+  d : float
       seperation distance between antenna and probe
-  L : array_like [float]
+  L : float
       scan length of region
 
   Notes
@@ -29,5 +28,4 @@ def angleOfView(a, d, L):
       theta = \tan^{-1} \left \dfrac{L-a}{2d} \right
   """
 
-  theta = rad2deg(atan2(asarray(L)-asarray(a), 2*asarray(d)))
-  return theta.tolist()
+  return degrees(atan2(L-a, 2*d))

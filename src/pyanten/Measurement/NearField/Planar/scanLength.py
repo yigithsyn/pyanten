@@ -1,15 +1,15 @@
-from numpy import asarray, tan, radians
+from math import tan, radians
 
-def scanLength(a, d, theta):
+def scanLength(a: float, d: float, theta:float):
   r""" Required length of the scan for desired angle-of-view in planar near-field antenna measurements
 
   Parameters
   ----------
-  a     : array_like [float]
+  a     : float
           antenna cross-section length
-  d     : array_like [float]
+  d     : float
           seperation distance between antenna and probe
-  theta : array_like [float]
+  theta : float
           desired pattern view angle along one side [deg]
 
   Notes
@@ -28,5 +28,4 @@ def scanLength(a, d, theta):
       L = 2d \cdot \tan\theta + a
   """
   
-  L = 2*asarray(d) * tan(radians(theta)) + asarray(a)
-  return L.tolist()
+  return 2*d * tan(radians(theta)) + a

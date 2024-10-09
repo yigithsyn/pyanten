@@ -1,7 +1,7 @@
 import sys
 import pytest
 
-sys.path.append('.')
+sys.path.append('./src')
 from pyanten import Utility
 
 

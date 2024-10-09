@@ -1,26 +1,26 @@
-from numpy import floor, ceil, mod
+from math import floor, ceil
 
 from pyanten.Measurement.NearField.Planar.samplingLength import samplingLength
 
-def samplingCount(frequency, L):
+def samplingCount(frequency: float, L: float):
   r""" Planar near-field antenna measurement sampling count according to frequency and desired minimum length
 
   Parameters
   ----------
-  frequency : array_like [float]
+  frequency : float
               frequency of interest in Hertz [Hz]
-  L         : array_like [float]
+  L         : float
               desired minimum scan length [m]
 
   Returns
   -------
-  Lm    : array_like [float]
+  Lm    : float
           sampling start position [m]
-  Lp    : array_like [float]
+  Lp    : float
           sampling stop position [m] (equals to negative of Lp)
-  N     : array_like [float]
+  N     : float
           samplng count
-  Delta : array_like [float]
+  Delta : float
           spatial samplng length [mm]
 
   Notes
@@ -35,12 +35,12 @@ def samplingCount(frequency, L):
   
   samplingLengthInmm = floor(samplingLength(frequency)*1E3)
   scanLengthInmm     = ceil(L*1E3)
-  halfScanLengthInmm = scanLengthInmm/2 if mod(scanLengthInmm,2) ==0 else (scanLengthInmm+1)/2
-  if mod(halfScanLengthInmm, samplingLengthInmm) > 0:
-    halfScanLengthInmm = halfScanLengthInmm + (samplingLengthInmm-mod(halfScanLengthInmm, samplingLengthInmm))
+  halfScanLengthInmm = scanLengthInmm/2 if scanLengthInmm%2 ==0 else (scanLengthInmm+1)/2
+  if halfScanLengthInmm%samplingLengthInmm > 0:
+    halfScanLengthInmm = halfScanLengthInmm + (samplingLengthInmm-halfScanLengthInmm%samplingLengthInmm)
   
   N  = 2*(halfScanLengthInmm/samplingLengthInmm)+1
   Lm = -halfScanLengthInmm
   Lp = +halfScanLengthInmm
   
-  return [ Lm.tolist()/1E3, Lp.tolist()/1E3, N.astype('int').tolist(), samplingLengthInmm.astype('int').tolist() ] 
+  return ( Lm/1E3, Lp/1E3, int(N), int(samplingLengthInmm) )

@@ -1,16 +1,15 @@
-from numpy import asarray
 
-def gammaToSwr(gamma):
+def gammaToSwr(gamma: float):
   """ Reflection coefficient (gamma) to voltage standing wave ratio (vswr) conversion
 
   Parameters
   ----------
-  gamma : array_like [float]
+  gamma : float
       reflection coefficient (s11)
 
   Returns
   -------
-  swr : array_like [float]
+  swr : float
       standing wave ratio (swr)
   """
-  return (1+asarray(gamma))/(1-asarray(gamma)).tolist()
+  return (1+gamma)/(1-gamma)

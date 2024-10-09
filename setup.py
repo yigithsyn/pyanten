@@ -16,7 +16,7 @@ VERSION = (HERE / "VERSION").read_text().strip()
 LICENSE = 'GNU Affero General Public License v3'
 
 # Required Python version
-PYTHON_VERSION = '>=3.12'
+PYTHON_VERSION = '>= 3'
 
 
 setup \
@@ -29,7 +29,7 @@ setup \
     , author           = "Hüseyin YİĞİT"
     , author_email     = "yigit.hsyn@gmail.com"
     , install_requires = \
-        [ 'numpy', 'scipy' ]
+        [ 'scipy>=1.0.0' ]
     , packages         = find_namespace_packages(where='src'),
       package_dir      = {"": "src"}
     , platforms        = 'Any'
@@ -40,7 +40,11 @@ setup \
         , 'License :: OSI Approved :: ' + LICENSE
         , 'Operating System :: OS Independent'
         , 'Programming Language :: Python'
+        , 'Programming Language :: Python :: 3'
         , 'Intended Audience :: Science/Research'
         , 'Intended Audience :: Other Audience'
+        , 'Topic :: Scientific/Engineering'
+        , 'Topic :: Scientific/Engineering :: Mathematics'
+        , 'Topic :: Scientific/Engineering :: Physics'
         ]
     )

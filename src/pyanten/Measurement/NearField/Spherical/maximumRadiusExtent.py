@@ -1,21 +1,20 @@
-from numpy import square, sqrt
-from pyanten.Utility import frequencyToWavelength
+from math import sqrt
 
-def maximumRadiusExtent(dx, dy, dz):
+def maximumRadiusExtent(dx: float, dy:float, dz:float):
   r""" Calculates maximum radial extend (MRE) of the antenna for spherical near-field (SNF) measurements
 
   Parameters
   ----------
-  dx : array_like [float]
+  dx : float
        max displacement from rotation center along x-axis
-  dy : array_like [float]
+  dy : float
        max displacement from rotation center along y-axis
-  dz : array_like [float]
+  dz : float
        max displacement from rotation center along z-axis
 
   Returns
   -------
-  mre : array_like [float]
+  mre : float
         maximum radius extent
 
   Notes
@@ -25,7 +24,7 @@ def maximumRadiusExtent(dx, dy, dz):
   Formula
   -------
   .. math::
-      mre &= \sqrt{dx^2+dy^2+dz^2}
+      mre = \sqrt{dx^2+dy^2+dz^2}
   """
   
-  return sqrt(square(dx) + square(dy) + square(dz)).tolist()
+  return sqrt(dx*dx + dy*dy + dz*dz)

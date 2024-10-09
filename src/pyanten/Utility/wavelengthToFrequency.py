@@ -1,16 +1,17 @@
 from pyanten.Utility.frequencyToWavelength import frequencyToWavelength
 
-def wavelengthToFrequency(wavelength):
+def wavelengthToFrequency(wavelength: float):
   """ Converts frequency to wavelength
 
   Parameters
   ----------
-  wavelength : array_like [float]
+  wavelength : float
       wavelength in meters [m]
 
   Returns
   -------
-  frequency : array_like [float]
+  frequency : float
       frequency in Hertz [Hz]
   """
+
   return frequencyToWavelength(wavelength)
