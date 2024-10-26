@@ -29,7 +29,7 @@ setup \
     , author           = "Hüseyin YİĞİT"
     , author_email     = "yigit.hsyn@gmail.com"
     , install_requires = \
-        [ 'scipy>=1.0.0' ]
+        [ 'scipy>=1.6.0' ]
     , packages         = find_namespace_packages(where='src'),
       package_dir      = {"": "src"}
     , platforms        = 'Any'
