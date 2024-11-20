@@ -36,7 +36,7 @@ setup \
     , url              = "https://github.com/yigithsyn/pyanten"
     , python_requires  = PYTHON_VERSION
     , classifiers      = \
-        [ 'Development Status :: 2 - Pre-Alpha'
+        [ 'Development Status :: 3 - Alpha'
         , 'License :: OSI Approved :: ' + LICENSE
         , 'Operating System :: OS Independent'
         , 'Programming Language :: Python'
