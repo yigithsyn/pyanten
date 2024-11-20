@@ -1,2 +1,2 @@
-New:
-- Utility :: gammaDbToReflectedPowerPercentage
+Fix:
+- Measurement :: minimumRange
