@@ -5,9 +5,7 @@ Antenna Toolkit
 ## Installation
 
 ```shell
-git clone https://github.com/atamlab/pyanten
-cd pyanten
-pip install . # or python setup.py
+pip install pyanten
 ```
 
 ## Table of Modules and Functions
@@ -23,5 +21,5 @@ pip install . # or python setup.py
 
 ## References
 
-[1] [A Python MoM antenna simulator](https://www.linkedin.com/pulse/python-mom-antenna-simulator-t-q-khai-nguyen/)
+[1] [A Python MoM antenna simulator](https://www.linkedin.com/pulse/python-mom-antenna-simulator-t-q-khai-nguyen/)  
 [2] [How to document kwargs according to Numpy style docstring?](https://stackoverflow.com/questions/62511086/how-to-document-kwargs-according-to-numpy-style-docstring)
