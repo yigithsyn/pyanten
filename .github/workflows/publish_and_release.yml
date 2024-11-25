@@ -80,7 +80,7 @@ jobs:
       id: changelog
       uses: juliangruber/read-file-action@v1
       with:
-        path: ./CHANGELOG
+        path: ./CHANGELOG.yml
     - name: Create GitHub Release
       env:
         GITHUB_TOKEN: ${{ github.token }}
