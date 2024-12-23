@@ -5,7 +5,7 @@ import pytest
 sys.path.append('./src')
 from pyanten import Measurement
 
-assert round(Measurement.NearField.minimumSeperation(10E9), 3) == 0.150
+assert round(Measurement.NearField.seperationDistance(10E9), 3) == 0.150
 
 assert round(Measurement.NearField.Planar.samplingLength(3E9), 3)        == 0.050
 assert round(Measurement.NearField.Planar.scanLength(20, 10, 60), 2)     == 54.64
