@@ -1,6 +1,6 @@
 from .samplingLength import samplingLength
 from .scanLength import scanLength
-from .samplingCount import samplingCount
+from .samplingParameters import samplingParameters
 from .angleOfView import angleOfView
   
 

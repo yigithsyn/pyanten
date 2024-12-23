@@ -2,7 +2,7 @@ from math import floor, ceil
 
 from pyanten.Measurement.NearField.Planar.samplingLength import samplingLength
 
-def samplingCount(frequency: float, L: float):
+def samplingParameters(frequency: float, L: float):
   r""" Planar near-field antenna measurement sampling count according to frequency and desired minimum length
 
   Parameters

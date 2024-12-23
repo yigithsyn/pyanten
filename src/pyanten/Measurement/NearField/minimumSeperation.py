@@ -1,6 +1,6 @@
 from pyanten.Utility import frequencyToWavelength
 
-def minimumRange(frequency: float, closer: bool = False) -> float:
+def minimumSeperation(frequency: float, closer: bool = False) -> float:
   r""" Minimum recommended distance for near-field antenna measurements in meters
 
   Parameters
