@@ -15,7 +15,7 @@ pip install pyanten
 | Utility     |                     |                     | frequencyToWavelength, gammaDbToSwr, gammaToSwr, swrToGamma, swrToGammaDb, wavelengthToFrequency, gammaDbToReflectedPowerPercentage |
 | Propagation |                     |                     | farfFieldDistance, lineOfSight, pathLoss, radioHorizon,                                                                             |
 | Measurement | NearField           |                     | seperationDistance,                                                                                                                       |
-| Measurement | NearField           | Planar              | angleOfView, samplingParameters, samplingLength, scanLength,                                                                             |
+| Measurement | NearField           | Planar              | angleOfView, samplingParameters, samplingSpacing, scanLength,                                                                             |
 | Measurement | NearField           | Spherical           | maximumRadiusExtent,                                                                                                                |
 | Array       |                     |                     | amplitudeTaper,                                                                                                                     |
 

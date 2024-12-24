@@ -7,7 +7,7 @@ from pyanten import Measurement
 
 assert round(Measurement.NearField.seperationDistance(10E9), 3) == 0.150
 
-assert round(Measurement.NearField.Planar.samplingLength(3E9), 3)        == 0.050
+assert round(Measurement.NearField.Planar.samplingSpacing(3E9), 3)        == 0.050
 assert round(Measurement.NearField.Planar.scanLength(20, 10, 60), 2)     == 54.64
 assert Measurement.NearField.Planar.samplingParameters(3E9, 1)                == (-0.539, +0.539, 23, 49)
 assert round(Measurement.NearField.Planar.angleOfView(20, 10, 54.64), 2) == 60.00
